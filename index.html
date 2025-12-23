@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Attendance - Teacher Panel</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QRCode CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Attendance System (Offline)</h1>
+
+        <button id="startSessionBtn">Start New Session</button>
+
+        <div id="qrSection" style="margin-top:20px; display:none;">
+    <h3>Scan this QR to Mark Attendance</h3>
+    
+    <div id="qrWrapper">
+        <div id="qrcode"></div>
+    </div>
+</div>
+
+
+        <h2>Attendance Record</h2>
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Sessions Present</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="generateDefaulters">Download Defaulter Report (< 75%)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
